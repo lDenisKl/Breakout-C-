@@ -1,2 +1,2 @@
-# Breakout-C-
+# Breakout С++
 Laboratory №8
