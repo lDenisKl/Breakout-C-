@@ -1,2 +1,10 @@
 ﻿  Source.cpp
+C:\Users\l_DK_l\Documents\GitHub\Breakout\Breakout\Breakout\Ball.h(8,16): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+  (компиляция исходного файла "Source.cpp")
+  
+C:\Users\l_DK_l\Documents\GitHub\Breakout\Breakout\Breakout\Source.cpp(27,78): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
+C:\Users\l_DK_l\Documents\GitHub\Breakout\Breakout\Breakout\Source.cpp(27,56): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
+C:\Users\l_DK_l\Documents\GitHub\Breakout\Breakout\Breakout\Source.cpp(27,34): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
+C:\Users\l_DK_l\Documents\GitHub\Breakout\Breakout\Breakout\Source.cpp(67,39): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\l_DK_l\Documents\GitHub\Breakout\Breakout\Breakout\Source.cpp(67,24): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
   Breakout.vcxproj -> C:\Users\l_DK_l\Documents\GitHub\Breakout\Breakout\Debug\Breakout.exe
