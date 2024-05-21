@@ -6,4 +6,17 @@ class Plate : public Paddle {   // Плашка для уничтожения
 private:
 	int			lifes = 3;		// кол-во ударов для уничтожения
 	std::string feature;		// суперспособность при уничтожении плашки
+public:
+	Plate() = default;
+	Plate(float x, float y,float height,float width, int lifes) {
+		this->transform = Point(x, y);
+
+		this->lifes = lifes;
+		this->height = height;
+		this->width = width;
+
+	}
+	void hit(int damage) { lifes -= damage; }
+	float getLifes() const { return lifes; }
+	std::string getFeature() const { return feature; }
 };

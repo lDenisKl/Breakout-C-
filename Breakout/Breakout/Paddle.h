@@ -4,6 +4,14 @@
 class Paddle : public GameObject { // Плитка игрока
 private:
 	float speed;			// скорость движения плитки
+	
+float getTouchOffset(float touchX) {
+	float diff = (transform.x + width) - touchX;
+	float offset = width - diff;
+	float result = 2 * offset / width;
+	return result - 1;
+}
+protected:
 	float width; 
 	float height;
 public:
@@ -15,6 +23,8 @@ public:
 		this->width = width;
 		this->height = height;
 	}
+
+	
 	float getWidth() const { return width; }
 	float getHeight() const { return height; }
 
