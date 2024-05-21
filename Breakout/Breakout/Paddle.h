@@ -24,7 +24,7 @@ public:
 		this->height = height;
 	}
 
-	
+	void setWidth(float nwidth) { width = nwidth; }
 	float getWidth() const { return width; }
 	float getHeight() const { return height; }
 

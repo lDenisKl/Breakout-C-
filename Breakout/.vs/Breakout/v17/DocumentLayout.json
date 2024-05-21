@@ -7,26 +7,23 @@
       "RelativeMoniker": "D:0:0:{4459FC04-7741-44A6-9560-5C0BB84116EA}|Breakout\\Breakout.vcxproj|solutionrelative:Breakout\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4459FC04-7741-44A6-9560-5C0BB84116EA}|Breakout\\Breakout.vcxproj|C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Point.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4459FC04-7741-44A6-9560-5C0BB84116EA}|Breakout\\Breakout.vcxproj|solutionrelative:Breakout\\Point.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72A65040-EE35-4638-B432-9DD509901716}|..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\VisualStudio\\17.0_b09e11d1\\SingleFileISense\\_sfi_a82752f2-a202-4b19-9090-4911bebcb9e8_.vcxproj|C:\\USERS\\L_DK_L\\SOURCE\\REPOS\\LAB10\\LAB10\\POINT.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\l_DK_l\\AppData\\Local\\Temp\\Rar$DIa14536.46855\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4459FC04-7741-44A6-9560-5C0BB84116EA}|Breakout\\Breakout.vcxproj|C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Ball.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4459FC04-7741-44A6-9560-5C0BB84116EA}|Breakout\\Breakout.vcxproj|solutionrelative:Breakout\\Ball.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\l_DK_l\\source\\repos\\Lab10\\Lab10\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4459FC04-7741-44A6-9560-5C0BB84116EA}|Breakout\\Breakout.vcxproj|C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Plate.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4459FC04-7741-44A6-9560-5C0BB84116EA}|Breakout\\Breakout.vcxproj|solutionrelative:Breakout\\Plate.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4459FC04-7741-44A6-9560-5C0BB84116EA}|Breakout\\Breakout.vcxproj|C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Paddle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4459FC04-7741-44A6-9560-5C0BB84116EA}|Breakout\\Breakout.vcxproj|solutionrelative:Breakout\\Paddle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4459FC04-7741-44A6-9560-5C0BB84116EA}|Breakout\\Breakout.vcxproj|C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Plate.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4459FC04-7741-44A6-9560-5C0BB84116EA}|Breakout\\Breakout.vcxproj|solutionrelative:Breakout\\Plate.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4459FC04-7741-44A6-9560-5C0BB84116EA}|Breakout\\Breakout.vcxproj|C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Point.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4459FC04-7741-44A6-9560-5C0BB84116EA}|Breakout\\Breakout.vcxproj|solutionrelative:Breakout\\Point.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4459FC04-7741-44A6-9560-5C0BB84116EA}|Breakout\\Breakout.vcxproj|C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -43,25 +40,39 @@
           "SelectedChildIndex": 4,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Ball.h",
+              "DocumentMoniker": "C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Ball.h",
+              "RelativeDocumentMoniker": "Breakout\\Ball.h",
+              "ToolTip": "C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Ball.h",
+              "RelativeToolTip": "Breakout\\Ball.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-10T19:41:21.221Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\l_DK_l\\AppData\\Local\\Temp\\Rar$DIa14536.46855\\main.c",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\Rar$DIa14536.46855\\main.c",
+              "ToolTip": "C:\\Users\\l_DK_l\\AppData\\Local\\Temp\\Rar$DIa14536.46855\\main.c",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\Rar$DIa14536.46855\\main.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-05-21T21:57:41.489Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d3750d8a-574b-4fb3-b7e2-aa8af40e8231}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Point.h",
-              "DocumentMoniker": "C:\\Users\\l_DK_l\\source\\repos\\Lab10\\Lab10\\Point.h",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\Lab10\\Lab10\\Point.h",
-              "ToolTip": "C:\\Users\\l_DK_l\\source\\repos\\Lab10\\Lab10\\Point.h",
-              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\Lab10\\Lab10\\Point.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-21T12:48:45.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "GameObject.h",
               "DocumentMoniker": "C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\GameObject.h",
               "RelativeDocumentMoniker": "Breakout\\GameObject.h",
@@ -73,26 +84,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Source.cpp",
-              "DocumentMoniker": "C:\\Users\\l_DK_l\\source\\repos\\Lab10\\Lab10\\Source.cpp",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\Lab10\\Lab10\\Source.cpp",
-              "ToolTip": "C:\\Users\\l_DK_l\\source\\repos\\Lab10\\Lab10\\Source.cpp",
-              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\Lab10\\Lab10\\Source.cpp",
-              "ViewState": "AQIAAFgAAAAAAAAAAAApwGAAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-17T21:46:02.273Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Source.cpp",
               "DocumentMoniker": "C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Source.cpp",
               "RelativeDocumentMoniker": "Breakout\\Source.cpp",
               "ToolTip": "C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Source.cpp",
               "RelativeToolTip": "Breakout\\Source.cpp",
-              "ViewState": "AQIAABgAAAAAAAAAAAASwG8AAABPAAAA",
+              "ViewState": "AQIAAHkBAAAAAAAAAAAAAH0BAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-10T19:45:44.008Z",
               "EditorCaption": ""
@@ -100,45 +98,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Ball.h",
-              "DocumentMoniker": "C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Ball.h",
-              "RelativeDocumentMoniker": "Breakout\\Ball.h",
-              "ToolTip": "C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Ball.h",
-              "RelativeToolTip": "Breakout\\Ball.h",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-10T19:41:21.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Plate.h",
               "DocumentMoniker": "C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Plate.h",
               "RelativeDocumentMoniker": "Breakout\\Plate.h",
               "ToolTip": "C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Plate.h",
               "RelativeToolTip": "Breakout\\Plate.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAASAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAASwBcAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-10T19:39:30.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T19:39:30.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Paddle.h",
               "DocumentMoniker": "C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Paddle.h",
               "RelativeDocumentMoniker": "Breakout\\Paddle.h",
               "ToolTip": "C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Paddle.h",
               "RelativeToolTip": "Breakout\\Paddle.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABoAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-10T19:38:36.042Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T19:38:36.042Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Point.h",
               "DocumentMoniker": "C:\\Users\\l_DK_l\\Documents\\GitHub\\Breakout\\Breakout\\Breakout\\Point.h",
               "RelativeDocumentMoniker": "Breakout\\Point.h",
@@ -146,8 +129,7 @@
               "RelativeToolTip": "Breakout\\Point.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-10T19:38:14.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T19:38:14.94Z"
             }
           ]
         }

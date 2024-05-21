@@ -30,6 +30,12 @@
     <ClInclude Include="GameObject.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="AL\al.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="AL\alc.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">

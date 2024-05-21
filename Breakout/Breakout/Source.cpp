@@ -3,6 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <ctime>
+
 #include "freeglut.h"
 #include "string"
 #include "vector"
@@ -11,6 +12,7 @@
 #include "Plate.h"
 #include "Ball.h"
 #pragma endregion
+#define FILENAME "sample.wav"
 #define REDISPLAYTIMERID 1
 using namespace std;
 
@@ -62,9 +64,9 @@ void showUpdatedObjects() {
                 glVertex2d(posX + width, posY + height);
                 glVertex2d(posX, posY + height);
                 glEnd();
-                /*char buffer[33];
-                _itoa_s(i, buffer, plates[i][j].getLifes());
-                RenderString(posX,posY,GLUT_BITMAP_HELVETICA_18, buffer);*/
+                std::string str = std::to_string(plates[i][j].getLifes());
+                const char* cstr = str.c_str();
+                RenderString(posX, posY, GLUT_BITMAP_HELVETICA_18, cstr);
             }
         }
     }
@@ -184,54 +186,47 @@ bool checkBallIntersection(Ball &ball) {
             // c низом
             if (ballPosY + ballRadius < plates[i][j].getPosition().y + plates[i][j].getHeight() && ballPosY + ballRadius>plates[i][j].getPosition().y && ballPosX > plates[i][j].getPosition().x && ballPosX < plates[i][j].getPosition().x + plates[i][j].getWidth()) {
                 ball.setSpeed(Point(ball.getSpeed().x, -ball.getSpeed().y));
-                plates[i][j].hit(ball.getPower());
-                brokenA++;
+                if (plates[i][j].hit(ball.getPower())) brokenA++;
+                
             }
             // с верхом
             else if (ballPosY - ballRadius > plates[i][j].getPosition().y && ballPosY - ballRadius < plates[i][j].getPosition().y + plates[i][j].getHeight() && ballPosX > plates[i][j].getPosition().x && ballPosX < plates[i][j].getPosition().x + plates[i][j].getWidth()) {
                 ball.setSpeed(Point(ball.getSpeed().x, -ball.getSpeed().y));
-                plates[i][j].hit(ball.getPower());
-                brokenA++;
+                if (plates[i][j].hit(ball.getPower())) brokenA++;
             }
             // справа
             else if (ballPosX - ballRadius > plates[i][j].getPosition().x && ballPosX - ballRadius < plates[i][j].getPosition().x + plates[i][j].getWidth() && ballPosY<plates[i][j].getPosition().y + plates[i][j].getHeight() && ballPosY>plates[i][j].getPosition().y) {
                 ball.setSpeed(Point(-ball.getSpeed().x, ball.getSpeed().y));
-                plates[i][j].hit(ball.getPower());
-                brokenA++;
+                if (plates[i][j].hit(ball.getPower())) brokenA++;
             }
             // слева
             else if (ballPosX + ballRadius < plates[i][j].getPosition().x + plates[i][j].getWidth() && ballPosX + ballRadius > plates[i][j].getPosition().x && ballPosY<plates[i][j].getPosition().y + plates[i][j].getHeight() && ballPosY>plates[i][j].getPosition().y) {
                 ball.setSpeed(Point(-ball.getSpeed().x, ball.getSpeed().y));
-                plates[i][j].hit(ball.getPower());
-                brokenA++;
+                if (plates[i][j].hit(ball.getPower())) brokenA++;
             }
             // BottomRightCorner
             else if (abs(plateBottomRightCorner.x - ballPosX) < ballRadius && abs(plateBottomRightCorner.y - ballPosY) < ballRadius) {
                 ball.setSpeed(Point(-abs(ball.getSpeed().x), abs(ball.getSpeed().y)));
                 ball.setPosition(ball.getPosition().x + (abs(plateBottomRightCorner.x - ballPosX) + 5.0f), ball.getPosition().y - (abs(plateBottomRightCorner.y - ballPosY) + 5.0f));
-                plates[i][j].hit(ball.getPower());
-                brokenA++;
+                if (plates[i][j].hit(ball.getPower())) brokenA++;
             }
             // BottomLeftCorner
             else if (abs(plateBottomLeftCorner.x - ballPosX) < ballRadius && abs(plateBottomLeftCorner.y - ballPosY) < ballRadius) {
                 ball.setSpeed(Point(-abs(ball.getSpeed().x), abs(ball.getSpeed().y)));
                 ball.setPosition(ball.getPosition().x - (abs(plateBottomLeftCorner.x - ballPosX) + 5.0f), ball.getPosition().y - (abs(plateBottomLeftCorner.y - ballPosY) + 5.0f));
-                plates[i][j].hit(ball.getPower());
-                brokenA++;
+                if (plates[i][j].hit(ball.getPower())) brokenA++;
             }
             // TopLeftCorner
             else if (abs(plateTopLeftCorner.x - ballPosX) < ballRadius && abs(plateTopLeftCorner.y - ballPosY) < ballRadius) {
                 ball.setSpeed(Point(-abs(ball.getSpeed().x), abs(ball.getSpeed().y)));
                 ball.setPosition(ball.getPosition().x - (abs(plateTopLeftCorner.x - ballPosX) + 5.0f), ball.getPosition().y + abs(plateTopLeftCorner.y - ballPosY) + 5.0f);
-                plates[i][j].hit(ball.getPower());
-                brokenA++;
+                if (plates[i][j].hit(ball.getPower())) brokenA++;
             }
             // TopRightCorner
             else if (abs(plateTopRightCorner.x - ballPosX) < ballRadius && abs(plateTopRightCorner.y - ballPosY) < ballRadius) {
                 ball.setSpeed(Point(-abs(ball.getSpeed().x), abs(ball.getSpeed().y)));
                 ball.setPosition(ball.getPosition().x + (abs(plateTopRightCorner.x - ballPosX) + 5.0f), ball.getPosition().y - (abs(plateTopRightCorner.y - ballPosY) + 5.0f));
-                plates[i][j].hit(ball.getPower());
-                brokenA++;
+                if (plates[i][j].hit(ball.getPower())) brokenA++;
             }
         }
     }
@@ -257,6 +252,7 @@ void frame() {
             TrashArray.push_back(i);
         }
     }
+   // paddle.setWidth(paddle.getWidth() - 0.01f);
     /*for(auto x: TrashArray) {
         balls.erase(std::next(balls.begin(), x));
     }*/
@@ -268,14 +264,30 @@ void display()
     showUpdatedObjects();
     if (balls.size() == 0) {
         if (white) {
-            glClearColor(1, 1, 1, 0.05f);
+            
             white = false;
         }
         else if (!white) {
-            glClearColor(1, 0.1f, 0.1f, 0.05f);
+            
             white = true;
         }
-            gameOver();
+        gameOver();
+        glClearColor(1, 0.1f, 0.1f, 0.05f);
+        int start = 3;
+        int end = WINDOW_WIDTH-100;
+        int r = rand() % (end - start + 1) + start;
+        glPointSize(r);
+        glBegin(GL_POINTS);
+        glColor3ub(0, 0, 3);
+
+        glVertex2f(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
+        glEnd();
+        glPointSize(r-r*0.2f);
+        glBegin(GL_POINTS);
+        glColor3ub(255, 255, 255);
+
+        glVertex2f(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
+        glEnd();
     }
     if (brokenA == platesA) {
         glClearColor(0, 0.5f, 0, 0.05f);
@@ -305,7 +317,7 @@ void mouseClick(int button, int state, int  x, int y) {
         }
     }
 }
-void mouseCB(int  x, int y)
+void mouseCB(int x, int y)
 {
     float wid = paddle.getWidth() / 2;
     if ( x<WINDOW_WIDTH - wid && x>wid) {
@@ -317,35 +329,30 @@ void mouseCB(int  x, int y)
         }
     }
 }
-void KeyboardDown(unsigned char key, int x, int y) {
-    if (key == 'n') {
-        AddBall();
-    }
-}
 void initBaseField() {
-    
+
     paddle = Paddle(10.0f, 150.0f, 25.0f);
     paddle.setPosition(350.0f, 20.0f);
     paddle.setColor(255, 255, 255);
-    Ball ball = Ball(paddle.getPosition().x+paddle.getWidth()/2, paddle.getPosition().y + paddle.getHeight() +10.0f,10.0f,6.0f);
+    Ball ball = Ball(paddle.getPosition().x + paddle.getWidth() / 2, paddle.getPosition().y + paddle.getHeight() + 10.0f, 10.0f, 6.0f);
     ball.setColor(200, 255, 255);
     balls.push_back(ball);
-    std::ifstream in("fieldVlad.txt");
+    std::ifstream in("field4.txt");
     int rows, columns;
     in >> rows >> columns;
     plates.resize(columns);
-    for (int i = 0; i < columns;++i) {
+    for (int i = 0; i < columns; ++i) {
         plates[i].resize(rows);
     }
-    for (int j = rows-1; j > -1; --j) {
+    for (int j = rows - 1; j > -1; --j) {
         for (int i = 0; i < columns; ++i) {
             int is;
             in >> is;
             if (is > 0) {
                 platesA++;
             }
-            float d =  (250 / columns);
-            plates[i][j] = Plate((WINDOW_WIDTH/columns)*i, (WINDOW_HEIGHT-250) + d * j,  d, WINDOW_WIDTH / columns ,is); 
+            float d = (250 / columns);
+            plates[i][j] = Plate((WINDOW_WIDTH / columns) * i, (WINDOW_HEIGHT - 350) + d * j, d, WINDOW_WIDTH / columns, is);
             int start = 15;
             int end = 255;
             int r = rand() % (end - start + 1) + start;
@@ -356,8 +363,24 @@ void initBaseField() {
     }
 }
 
+void KeyboardDown(unsigned char key, int x, int y) {
+    if (key == 'n') {
+        AddBall();
+    }
+    else if (key == 'r') {
+        glClearColor(0, 0, 0, 0.05f);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        plates.clear();
+        balls.clear();
+        paddle = Paddle(); brokenA = 0;
+        platesA = 0;
+        initBaseField();
+    }
+}
+
 int main(int argc, char** argv)
 {
+
     srand(time(0));
     glutInit(&argc, argv);                   // начальная инициализация окна
     glutInitDisplayMode(GLUT_DOUBLE);        // установка режима отображения

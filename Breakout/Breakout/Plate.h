@@ -16,7 +16,13 @@ public:
 		this->width = width;
 
 	}
-	void hit(int damage) { lifes -= damage; }
-	float getLifes() const { return lifes; }
+	bool hit(int damage) { 
+		lifes -= damage;
+		if (lifes < 1) {
+			return true;
+		}
+		return false;
+	}
+	int getLifes() const { return lifes; }
 	std::string getFeature() const { return feature; }
 };

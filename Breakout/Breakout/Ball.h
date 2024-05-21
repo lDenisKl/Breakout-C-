@@ -8,7 +8,7 @@ private:
 	float speedX = 0.0f;	  // —корость шара
 	float speedY = 0.0f;
 	float velocity = 0.0f;
-	int   power = 1.0f;	      //  ол-во жизней, забираемых у плашки при столкновении 
+	int   power = 255.0f;	      //  ол-во жизней, забираемых у плашки при столкновении 
 public:
 	Ball(float x,float y,float radius,float velo) {
 		this->transform = Point(x, y);
