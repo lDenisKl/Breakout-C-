@@ -12,7 +12,7 @@
 #include "Plate.h"
 #include "Ball.h"
 #pragma endregion
-#define FILENAME "sample.wav"
+
 #define REDISPLAYTIMERID 1
 using namespace std;
 
@@ -26,16 +26,21 @@ int platesA = 0;
 Paddle paddle;
 vector<Ball> balls;
 
-void RenderString(float x, float y, void* font, const char* string)
+void RenderString(float x, float y, void* font, const char* string,int color)
 {
     auto uchrs = reinterpret_cast<unsigned char*>(const_cast<char*>(string));
     char* c;
-    glColor3f(0, 0, 0);
+    glColor3f(color, 0, 0);
     glRasterPos2f(x, y);
     glutBitmapString(font, uchrs);
 }
 
 void showUpdatedObjects() {
+    std::string str = std::to_string(brokenA);
+    std::string str1 = std::to_string(platesA);
+    std::string h = str + " / " +str1;
+    const char* cstr = h.c_str();
+    RenderString(10,10, GLUT_BITMAP_HELVETICA_18, cstr,255);
     // show paddle
     float posX = paddle.getPosition().x;
     float posY = paddle.getPosition().y;
@@ -47,6 +52,19 @@ void showUpdatedObjects() {
     glVertex2d(posX+width, posY);
     glVertex2d(posX+width, posY + height);
     glVertex2d(posX, posY +height);
+    glEnd();
+    glLineWidth(3);
+    glColor3ub(0,0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(posX+20, posY-2);
+    glVertex2f(posX+20, posY+height+2);
+    glEnd();
+    glLineWidth(3);
+    glColor3ub(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(posX + width - 20, posY - 2);
+    glVertex2f(posX + width - 20, posY + height + 2);
+
     glEnd();
 
     //show plates
@@ -66,7 +84,7 @@ void showUpdatedObjects() {
                 glEnd();
                 std::string str = std::to_string(plates[i][j].getLifes());
                 const char* cstr = str.c_str();
-                RenderString(posX, posY, GLUT_BITMAP_HELVETICA_18, cstr);
+                RenderString(posX, posY, GLUT_BITMAP_HELVETICA_18, cstr,0);
             }
         }
     }
@@ -235,13 +253,13 @@ bool checkBallIntersection(Ball &ball) {
 
 void victory() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    RenderString(WINDOW_WIDTH/2, WINDOW_HEIGHT / 2, GLUT_BITMAP_TIMES_ROMAN_24, "PRETTY BOY!");
+    RenderString(WINDOW_WIDTH/2, WINDOW_HEIGHT / 2, GLUT_BITMAP_TIMES_ROMAN_24, "PRETTY BOY!",0);
 }
 void gameOver() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     int width = rand() % (1000 - 0 + 1) + 0;
     int height = rand() % (800 - 0 + 1) + 0;
-    RenderString(width, height, GLUT_BITMAP_HELVETICA_18, "LOSER!");
+    RenderString(width, height, GLUT_BITMAP_HELVETICA_18, "LOSER!",0);
 }
 
 void frame() {
@@ -303,6 +321,9 @@ void timerFunc(int nTimerID)
     case REDISPLAYTIMERID:
         g_c++;
         glutPostRedisplay();
+        if (balls.size() > 0 &&  balls[0].getSpeed().y > 0 ) {
+            balls[0].setSpeed(Point(balls[0].getSpeed().x + 0.001f, balls[0].getSpeed().y + 0.001f));
+        }
         glutTimerFunc(10, timerFunc, REDISPLAYTIMERID);
         break;
     }
@@ -337,9 +358,10 @@ void initBaseField() {
     Ball ball = Ball(paddle.getPosition().x + paddle.getWidth() / 2, paddle.getPosition().y + paddle.getHeight() + 10.0f, 10.0f, 6.0f);
     ball.setColor(200, 255, 255);
     balls.push_back(ball);
-    std::ifstream in("field4.txt");
-    int rows, columns;
-    in >> rows >> columns;
+    std::ifstream in("field2.txt");
+    int power,rows, columns;
+    in >>power>> rows >> columns;
+    balls[0].setPower(power);
     plates.resize(columns);
     for (int i = 0; i < columns; ++i) {
         plates[i].resize(rows);
